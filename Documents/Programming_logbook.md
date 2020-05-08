@@ -26,3 +26,11 @@ This looks like the right 1D mesh so lets continue with the other files. lets st
 
 Nothing needs to be changed in the constant directory for now, in the electricProperties file we can change the charge/diffusivity of the ions. Changing the charge and diffusivity of the ions will be needed to reproduce results. 
 
+### 08/05/2020
+#### salt concentration
+I will use the sample tool provided by openFoam, this lets me read out the ion concentrations allong a line. The sampleDict file is in the system directory. I took out the psi and u from the fields to be sampled because we are only interested in the ion concentrations. I changed the type to uniform and the axis to Z, I added nPoints since this is needed with a uniform line and i put it to 50 and i changed the start and end points to match our geometry. I deleted the probes function out of the controlDict file and the jMonitor and ciMonitor functions from the fvSolution file since the sample utility will be all we need for our purpose. 
+
+Now I think everything is ready so lets run it by first entering "blockMesh" and then "rheoEFoam" in the terminal. 
+
+[this](https://www.cfd.at/sites/default/files/tutorialsV4/14-ExampleFourteen.pdf) tutorial explains how to incorperate the sample function while the simulation is running, that might be interesting to explore at a later time.
+
