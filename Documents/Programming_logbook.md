@@ -34,3 +34,8 @@ Now I think everything is ready so lets run it by first entering "blockMesh" and
 
 [this](https://www.cfd.at/sites/default/files/tutorialsV4/14-ExampleFourteen.pdf) tutorial explains how to incorperate the sample function while the simulation is running, that might be interesting to explore at a later time.
 
+### 11/05/2020
+#### salt concentration
+The simulation took 20 hours to simulate 0.15 seconds on my laptop, I think it an definetly be refined to run quicker. Some thing to look into are taking out the Navier-Stokes equations, bigger delta t timesteps, smaller simulation time if the data converges to a value quicker then after 0.15 seconds. 
+
+Before going into the refinement lets first look if the simulation actually did what we would expect. by running the "sample" command in the case directorie a new directorie gets created named sets wherin the ion concentrations of different times are stored in .xy files. We first have to convert these files to .txt files to import them to python (I didn't find a way to input the .xy files directly but maybe that's also possible) I'll save the converted files in the new Data folder in this repository. 
