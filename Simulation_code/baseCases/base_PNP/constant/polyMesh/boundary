@@ -2,7 +2,7 @@
 | =========                 |                                                 |
 | \\      /  F ield         | foam-extend: Open Source CFD                    |
 |  \\    /   O peration     | Version:     4.0                                |
-|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -10,48 +10,50 @@ FoamFile
     version     2.0;
     format      ascii;
     class       polyBoundaryMesh;
+    location    "constant/polyMesh";
     object      boundary;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 6
 (
-    elecNorth
-    {
-        type            patch;
-        nFaces          80;
-        startFace       50880;
-    }
-    wallEast
+    periodicX_half0
     {
         type            wall;
-        nFaces          80;
-        startFace       50960;
+        nFaces          1225;
+        startFace       124950;
     }
-    wallWest
+    periodicX_half1
     {
         type            wall;
-        nFaces          80;
-        startFace       51040;
+        nFaces          1225;
+        startFace       126175;
     }
-    elecSouth
-    {
-        type            patch;
-        nFaces          80;
-        startFace       51120;
-    }
-    cylinder
+    periodicY_half0
     {
         type            wall;
-        nFaces          320;
-        startFace       51200;
+        nFaces          1225;
+        startFace       127400;
     }
-    frontAndBack
+    periodicY_half1
     {
-        type            empty;
-        nFaces          51200;
-        startFace       51520;
+        type            wall;
+        nFaces          1225;
+        startFace       128625;
+    }
+    periodicZ_half0
+    {
+        type            wall;
+        nFaces          1225;
+        startFace       129850;
+    }
+    periodicZ_half1
+    {
+        type            wall;
+        nFaces          1225;
+        startFace       131075;
     }
 )
+
 
 // ************************************************************************* //
