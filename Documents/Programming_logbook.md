@@ -38,4 +38,9 @@ Now I think everything is ready so lets run it by first entering "blockMesh" and
 #### salt concentration
 The simulation took 20 hours to simulate 0.15 seconds on my laptop, I think it an definetly be refined to run quicker. Some thing to look into are taking out the Navier-Stokes equations, bigger delta t timesteps, smaller simulation time if the data converges to a value quicker then after 0.15 seconds. 
 
-Before going into the refinement lets first look if the simulation actually did what we would expect. by running the "sample" command in the case directorie a new directorie gets created named sets wherin the ion concentrations of different times are stored in .xy files. We first have to convert these files to .txt files to import them to python (I didn't find a way to input the .xy files directly but maybe that's also possible) I'll save the converted files in the new Data folder in this repository. 
+Before going into the refinement lets first look if the simulation actually did what we would expect. by running the "sample" command in the case directorie a new directorie gets created named sets wherin the ion concentrations of different times are stored in .xy files. We first have to convert these files to .txt files to import them to python (I didn't find a way to input the .xy files directly but maybe that's also possible) I'll save the converted files in the new Data folder in this repository.
+
+I imported the data to python and put it in different graphs for each timestep. As can be seen from these graphs the ionic concentrations converge within 0.03 seconds to their end values since from that point onward there is no more change in the graphs, this means that letting the simulation run until 0.03s will be suficient. I didn't expect to see a linear relation between the ion concentrations and the distance from the electrode because of shielding from the EDL, so I think something went wrong.
+![saltConcentration_firstRun](https://user-images.githubusercontent.com/64592913/81566078-a3c40280-939a-11ea-9f7e-853e114eb62b.png)
+
+
