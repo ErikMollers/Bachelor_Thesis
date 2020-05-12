@@ -43,4 +43,9 @@ Before going into the refinement lets first look if the simulation actually did 
 I imported the data to python and put it in different graphs for each timestep. As can be seen from these graphs the ionic concentrations converge within 0.03 seconds to their end values since from that point onward there is no more change in the graphs, this means that letting the simulation run until 0.03s will be suficient. I didn't expect to see a linear relation between the ion concentrations and the distance from the electrode because of shielding from the EDL, so I think something went wrong.
 ![saltConcentration_firstRun](https://user-images.githubusercontent.com/64592913/81566078-a3c40280-939a-11ea-9f7e-853e114eb62b.png)
 
+### 12-05-2020
+#### salt concentration
+Last night I run the simulation while turning of the Navier-Stokes equations in the fvSolution file in the system case directory to check if the results would be the same. This time the simulation finished in 4.5 hours so it took a lot shorter time to simulate the 0.15 seconds. The results look exactly the same so for our purpose I keep the Navier-Stokes equations turned off during future runs
+![saltConcentration_secondRun](https://user-images.githubusercontent.com/64592913/81671989-d2e57d00-9449-11ea-82ee-ea0c2b30d705.png)
+
 
