@@ -74,7 +74,7 @@ electricControls
 
 SIMPLE
 {
-    solveFluid      true;
+    solveFluid      false;
      
     nInIter         1;
     nNonOrthogonalCorrectors 2;
