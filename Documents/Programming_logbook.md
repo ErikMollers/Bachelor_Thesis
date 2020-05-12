@@ -48,4 +48,4 @@ I imported the data to python and put it in different graphs for each timestep. 
 Last night I run the simulation while turning of the Navier-Stokes equations in the fvSolution file in the system case directory to check if the results would be the same. This time the simulation finished in 4.5 hours so it took a lot shorter time to simulate the 0.15 seconds. The results look exactly the same so for our purpose I keep the Navier-Stokes equations turned off during future runs
 ![saltConcentration_secondRun](https://user-images.githubusercontent.com/64592913/81671989-d2e57d00-9449-11ea-82ee-ea0c2b30d705.png)
 
-
+I upped the starting ion concentrations by 3 orders of magnitude to see if the correlation between the distance of the electrode and the ion concentration changes. The ion concentration is controlled in the 0/cAnion and 0/cCation files in the case directory. I kept the run time at 0.15 seconds because I don't know if the equilibrium time changes with starting ion concentration.
