@@ -42,9 +42,9 @@ sets
         type        uniform;
         axis        z;
 
-        start       ( 0.5e-9 0.5e-9 -20e-9 );
-        end         ( 0.5e-9 0.5e-9 20e-9 );
-	nPoints     50;       
+        start       ( 0.5e-7 0.5e-7 -20e-7 );
+        end         ( 0.5e-7 0.5e-7 20e-7 );
+	nPoints     100;       
     } 
 );
 
