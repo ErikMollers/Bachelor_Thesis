@@ -55,8 +55,12 @@ I upped the starting ion concentrations by 3 orders of magnitude to see if the c
 The same linear correlation exists in the simulation with higher starting ion concentrations. 
 ![saltConcentration_highC](https://user-images.githubusercontent.com/64592913/81787076-d2f48400-9500-11ea-91d2-ca8b720e20a5.png)
 
-For the next run I'll make the length of the simulation domain 2 orders of magnitude bigger. I'll also let the simulation run untill 0.09 seconds instead of 0.15. Making the length bigger is done in the blockMeshDict file in constant/polymesh, I'll also have to change the sampleDict file in the system directorie to sample the new points. The run time can be changed in the controlDict file in the system directorie.
+For the next run I'll make the length of the simulation domain 2 orders of magnitude bigger. I'll also let the simulation run untill 0.09 seconds instead of 0.15, I will drop the starting concentration of ions back down so I can isolate the effect of a bigger domain. Making the length bigger is done in the blockMeshDict file in constant/polymesh, I'll also have to change the sampleDict file in the system directorie to sample the new points. The run time can be changed in the controlDict file in the system directorie.
 
+Still the exact same linear behaviour is produced, this is a unfysical result because the concentration at 10e-7 meter from the electrode shouldn't be the same as the concentration 10e-9 meter from the electrode, which is the case currently comparing these results to the results of the second run.
+![saltConcentration_bigDomain](https://user-images.githubusercontent.com/64592913/81807660-c4b56080-951e-11ea-910b-17171091141f.png)
+
+Since I kept getting the same linear correlation between the ion concentration and distance from electrode, which I still think is wrong. I'm gonna try to break this linear correlation by going for an even bigger simulation domain (order of magnitude in cm) taking the same high ionic concentration as in the highC run, and refining the mesh. If this will still produce the linear correlation then either something in the simulation isn't working correctly or my understanding of the problem is wrong. 
 
 
 
