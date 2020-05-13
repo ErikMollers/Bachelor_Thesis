@@ -49,3 +49,14 @@ Last night I run the simulation while turning of the Navier-Stokes equations in 
 ![saltConcentration_secondRun](https://user-images.githubusercontent.com/64592913/81671989-d2e57d00-9449-11ea-82ee-ea0c2b30d705.png)
 
 I upped the starting ion concentrations by 3 orders of magnitude to see if the correlation between the distance of the electrode and the ion concentration changes. The ion concentration is controlled in the 0/cAnion and 0/cCation files in the case directory. I kept the run time at 0.15 seconds because I don't know if the equilibrium time changes with starting ion concentration.
+
+### 13-05-2020
+#### salt concentration
+The same linear correlation exists in the simulation with higher starting ion concentrations. 
+![saltConcentration_highC](https://user-images.githubusercontent.com/64592913/81787076-d2f48400-9500-11ea-91d2-ca8b720e20a5.png)
+
+For the next run I'll make the length of the simulation domain 2 orders of magnitude bigger. I'll also let the simulation run untill 0.09 seconds instead of 0.15. Making the length bigger is done in the blockMeshDict file in constant/polymesh, I'll also have to change the sampleDict file in the system directorie to sample the new points. The run time can be changed in the controlDict file in the system directorie.
+
+
+
+
