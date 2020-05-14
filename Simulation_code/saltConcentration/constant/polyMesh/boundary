@@ -20,20 +20,20 @@ FoamFile
     elecNorth
     {
         type            patch;
-        nFaces          6400;
-        startFace       12640;
+        nFaces          1;
+        startFace       99;
     }
     elecSouth
     {
         type            patch;
-        nFaces          6400;
-        startFace       19040;
+        nFaces          1;
+        startFace       100;
     }
     Sides
     {
         type            empty;
-        nFaces          320;
-        startFace       25440;
+        nFaces          400;
+        startFace       101;
     }
 )
 
