@@ -62,5 +62,13 @@ Still the exact same linear behaviour is produced, this is a unfysical result be
 
 Since I kept getting the same linear correlation between the ion concentration and distance from electrode, which I still think is wrong. I'm gonna try to break this linear correlation by going for an even bigger simulation domain (order of magnitude in cm) taking the same high ionic concentration as in the highC run, and refining the mesh. If this will still produce the linear correlation then either something in the simulation isn't working correctly or my understanding of the problem is wrong. 
 
+While refining the mesh in the blockMeshDict file I noticed something was wrong. In the blocks subdict you first define the shape of the block, the next entry is which vertices the block consists of and the entry after that decides how much cells are in each direction. The entry was set at ( 80 80 1 ), meaning there were 80 cells in the x and y directions and only 1 cell in the Z direction. The z direction was the only direction that the script was solving for so I changed the entry to ( 1 1 100 ) which should hopefully solve the issues. I decided to rerun the previous bigDomain run but this time with the correct mesh. Finally something else then a linear correlation showed up in the data. What was also interesting is that the simulation time got cut down from 4.5hours to half a minute.
+![saltConventration_bigDomainFixed](https://user-images.githubusercontent.com/64592913/81917094-07d20b00-95d5-11ea-9419-e931fd9dbee9.png)
+
+### 14-05-2020
+#### saltConcentration
+I decided to turn the Navier-Stokes equations on again, since simulation time is not an issue anymore. I simulated the original domain with the original variables used in the first run. 
+![saltConcentration_originalDomainFixed](https://user-images.githubusercontent.com/64592913/81916144-bb3a0000-95d3-11ea-88db-89faccf1dda0.png)
+
 
 
