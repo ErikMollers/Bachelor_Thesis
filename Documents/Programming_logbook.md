@@ -72,3 +72,8 @@ I decided to turn the Navier-Stokes equations on again, since simulation time is
 
 I'm gonna do a simulation with the concentration of ions in milimol per liter, this equals 1 mol per kubic meter which are the units that openFoam works with. I'm gonna make the simulation domain 30 debyelengths long, this concentration corresponds to an debye length of 9.65 nanometer, I will make the simulation domain 290 nanometer long. I should set the simulation time at atleast 10*L^2/D which equals 8.41e-4 seconds, I will let it run untill 0.03 seconds then the simulation wil definetly have reached equilibrium. 
 
+### 15-05-2020
+#### saltConcentration
+I will refine the mesh by putting simple grading on ( 1 1 10 ) what this does is make the cell closest to the neutral electrode 10 times as long as the cell closest to the charged electrode, as can be seen on the picture below. This is important because we want a refined mesh at the EDL position and we don't care as much about the mesh far away from the EDL. 
+![saltConcentrationMesh](https://user-images.githubusercontent.com/64592913/82044931-851d7e80-96ae-11ea-8c3b-70e0f97c676a.png)
+
