@@ -77,3 +77,8 @@ I'm gonna do a simulation with the concentration of ions in milimol per liter, t
 I will refine the mesh by putting simple grading on ( 1 1 10 ) what this does is make the cell closest to the neutral electrode 10 times as long as the cell closest to the charged electrode, as can be seen on the picture below. This is important because we want a refined mesh at the EDL position and we don't care as much about the mesh far away from the EDL. 
 ![saltConcentrationMesh](https://user-images.githubusercontent.com/64592913/82044931-851d7e80-96ae-11ea-8c3b-70e0f97c676a.png)
 
+### 18-05-2020
+#### saltConcentration
+The simulation got a lot less stable because of the increased salt concentration, I had to increase the delta t from 2e-5 to 2e-8 to keep it from crashing. Interesting in these results is the drop to 0 potential next to the opposite electrode, this comes from the boundary condition that fixes the potential at 0 here. I feel like this result is unphysical and I should try and switch this boundary condition.
+![saktConcentration_1mM](https://user-images.githubusercontent.com/64592913/82200415-3f0b2980-98ff-11ea-9214-fdaca81e0126.png)
+
