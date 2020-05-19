@@ -20,12 +20,12 @@ internalField   uniform 0;
 
 boundaryField
 {
-    elecNorth
+    elecCharge
     {
 	type            zeroGradient;      
     }
    
-    elecSouth
+    elecNeutral
     {
 	type            zeroGradient;        
     }

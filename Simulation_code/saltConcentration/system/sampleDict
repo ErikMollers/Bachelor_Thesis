@@ -31,6 +31,7 @@ interpolationScheme cellPointFace;
 
 fields
 (
+   psi
    cAnion
    cCation  
 );
@@ -42,9 +43,9 @@ sets
         type        uniform;
         axis        z;
 
-        start       ( 0.5e-9 0.5e-9 -20e-9 );
-        end         ( 0.5e-9 0.5e-9 20e-9 );
-	nPoints     100;       
+        start       ( 0.5e-9 0.5e-9 -145e-9 );
+        end         ( 0.5e-9 0.5e-9 145e-9 );
+	nPoints     500;       
     } 
 );
 

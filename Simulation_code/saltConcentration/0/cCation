@@ -16,20 +16,20 @@ FoamFile
 
 dimensions      [ 0 -3 0 0 1 0 0 ];
 
-internalField   uniform 9.48946E-05;
+internalField   uniform 1;
 
 boundaryField
 {
-    elecNorth
+    elecCharge
     {
         type            zeroIonicFlux;
-        value           uniform 9.48946E-05;       
+        value           uniform 1;       
     }
    
-    elecSouth
+    elecNeutral
     {
         type            zeroIonicFlux;
-        value           uniform 9.48946E-05;      
+        value           uniform 1;      
     }
     
     Sides

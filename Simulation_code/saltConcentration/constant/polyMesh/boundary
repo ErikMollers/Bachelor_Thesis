@@ -17,13 +17,13 @@ FoamFile
 
 3
 (
-    elecNorth
+    elecCharge
     {
         type            patch;
         nFaces          1;
         startFace       99;
     }
-    elecSouth
+    elecNeutral
     {
         type            patch;
         nFaces          1;
