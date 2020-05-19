@@ -70,5 +70,15 @@ While refining the mesh in the blockMeshDict file I noticed something was wrong.
 I decided to turn the Navier-Stokes equations on again, since simulation time is not an issue anymore. I simulated the original domain with the original variables used in the first run. 
 ![saltConcentration_originalDomainFixed](https://user-images.githubusercontent.com/64592913/81916144-bb3a0000-95d3-11ea-88db-89faccf1dda0.png)
 
+I'm gonna do a simulation with the concentration of ions in milimol per liter, this equals 1 mol per kubic meter which are the units that openFoam works with. I'm gonna make the simulation domain 30 debyelengths long, this concentration corresponds to an debye length of 9.65 nanometer, I will make the simulation domain 290 nanometer long. I should set the simulation time at atleast 10*L^2/D which equals 8.41e-4 seconds, I will let it run untill 0.03 seconds then the simulation wil definetly have reached equilibrium. 
 
+### 15-05-2020
+#### saltConcentration
+I will refine the mesh by putting simple grading on ( 1 1 10 ) what this does is make the cell closest to the neutral electrode 10 times as long as the cell closest to the charged electrode, as can be seen on the picture below. This is important because we want a refined mesh at the EDL position and we don't care as much about the mesh far away from the EDL. 
+![saltConcentrationMesh](https://user-images.githubusercontent.com/64592913/82044931-851d7e80-96ae-11ea-8c3b-70e0f97c676a.png)
+
+### 18-05-2020
+#### saltConcentration
+The simulation got a lot less stable because of the increased salt concentration, I had to increase the delta t from 2e-5 to 2e-8 to keep it from crashing. Interesting in these results is the drop to 0 potential next to the opposite electrode, this comes from the boundary condition that fixes the potential at 0 here. I feel like this result is unphysical and I should try and switch this boundary condition.
+![saktConcentration_1mM](https://user-images.githubusercontent.com/64592913/82200415-3f0b2980-98ff-11ea-9214-fdaca81e0126.png)
 
