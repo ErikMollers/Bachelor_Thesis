@@ -1,0 +1,46 @@
+
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      psi;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 2 -3 0 0 -1 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    elecCharge
+    {
+       type          oscillatingFixedValue;
+       value         uniform 0;    // Initialization value
+       refValue      uniform 1.0;    // Reference value for oscillation
+       offset        -1.0;           // Oscillation mean value offset
+       amplitude     0.025; // Amplitude of oscillation
+       frequency     100; // frequency      
+    }
+   
+    elecNeutral
+    {
+	type            fixedValue;
+        value           uniform 0;        
+    }
+    
+    Sides
+    {
+	type            empty;     
+    }    
+}
+
+// ************************************************************************* //
