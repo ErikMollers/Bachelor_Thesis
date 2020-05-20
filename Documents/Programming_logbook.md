@@ -82,3 +82,11 @@ I will refine the mesh by putting simple grading on ( 1 1 10 ) what this does is
 The simulation got a lot less stable because of the increased salt concentration, I had to increase the delta t from 2e-5 to 2e-8 to keep it from crashing. Interesting in these results is the drop to 0 potential next to the opposite electrode, this comes from the boundary condition that fixes the potential at 0 here. I feel like this result is unphysical and I should try and switch this boundary condition.
 ![saktConcentration_1mM](https://user-images.githubusercontent.com/64592913/82200415-3f0b2980-98ff-11ea-9214-fdaca81e0126.png)
 
+### 20-05-2020
+#### saltconcentration_timeDep
+So apparently I forgot to save the changes I made to the logbook yesterday. I found a [boundary condition](https://openfoamwiki.net/index.php/Main_ContribExamples/OscillatingFixedValue) that could be used for the ACpotential. I put the frequency at 100 so one cycle would take 0.01 seconds. I changed the runtime to 0.01 seconds, the writeinterval to 0.0025 seconds so I would get samples at the extreme values of the function and at the points where the potential was 0. I had to half the delta t timestep to 1e-8 for the simulation to not crash. 
+
+Looking at the results, it looks like the potential stayed fixed at 1V and the ion concentrations are acting weird. I need to find a different boundary condition for the ACpotential.
+![saltConcentration_timeDep_firstRun](https://user-images.githubusercontent.com/64592913/82427509-7efe1800-9a89-11ea-8f5c-58fedf105b8d.png)
+
+
