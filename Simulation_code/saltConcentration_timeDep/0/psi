@@ -23,12 +23,12 @@ boundaryField
 {
     elecCharge
     {
-       type          oscillatingFixedValue;
-       value         uniform 0;    // Initialization value
-       refValue      uniform 1.0;    // Reference value for oscillation
-       offset        -1.0;           // Oscillation mean value offset
-       amplitude     0.025; // Amplitude of oscillation
-       frequency     100; // frequency      
+       type            ACPotential;
+        value           uniform 0;
+        offset          0;
+        amplitude       0.025;
+        frequency       100;
+        phaseDelay      0; 
     }
    
     elecNeutral
