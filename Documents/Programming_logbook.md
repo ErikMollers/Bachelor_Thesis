@@ -70,7 +70,7 @@ While refining the mesh in the blockMeshDict file I noticed something was wrong.
 I decided to turn the Navier-Stokes equations on again, since simulation time is not an issue anymore. I simulated the original domain with the original variables used in the first run. 
 ![saltConcentration_originalDomainFixed](https://user-images.githubusercontent.com/64592913/81916144-bb3a0000-95d3-11ea-88db-89faccf1dda0.png)
 
-I'm gonna do a simulation with the concentration of ions in milimol per liter, this equals 1 mol per kubic meter which are the units that openFoam works with. I'm gonna make the simulation domain 30 debyelengths long, this concentration corresponds to an debye length of 9.65 nanometer, I will make the simulation domain 290 nanometer long. I should set the simulation time at atleast 10*L^2/D which equals 8.41e-4 seconds, I will let it run untill 0.03 seconds then the simulation wil definetly have reached equilibrium. 
+I'm gonna do a simulation with the concentration of ions in milimol per liter, this equals 1 mol per kubic meter which are the units that openFoam works with. I'm gonna make the simulation domain 30 debyelengths long, this concentration corresponds to an debye length of 9.74 nanometer, I will make the simulation domain 290 nanometer long. I should set the simulation time at atleast 10*L^2/D which equals 8.41e-4 seconds, I will let it run untill 0.03 seconds then the simulation wil definetly have reached equilibrium. 
 
 ### 15-05-2020
 #### saltConcentration
@@ -88,5 +88,12 @@ So apparently I forgot to save the changes I made to the logbook yesterday. I fo
 
 Looking at the results, it looks like the potential stayed fixed at 1V and the ion concentrations are acting weird. I need to find a different boundary condition for the ACpotential.
 ![saltConcentration_timeDep_firstRun](https://user-images.githubusercontent.com/64592913/82427509-7efe1800-9a89-11ea-8f5c-58fedf105b8d.png)
+
+### 01-06-2020
+#### saltconcentration
+I will refine the mesh further by making it finer at both electrodes and more spread out in the midle. This can be done by making 2 blocks instead of 1 and do the simplegrading in reverse for both blocks. The mesh now looks lik this:
+![saltConcentrationMesh](https://user-images.githubusercontent.com/64592913/83436287-e0d16100-a43d-11ea-83ef-75b2707178e3.png)
+
+I want to study the time scale of the formation of the EDL, a good time scale to look at is multiples of 1/(k^2*D) which represents the time it takes for ions to diffuse 1 debye length. For these simulation parameters that corresponds to 9.49e-8 seconds. at the controlDict file I put the end time as 100 times this quantity. the writeinterval as 0.1 times this quantity and I will put the delta t as 2e-10. I will also change the potential at the other electrode to -25mV to get a symmetric graph. This will also get the potential to drop to 0 between the electrodes what is needed to fit my derived theorethical potential because of a B.C. during the derivation.
 
 
