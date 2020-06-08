@@ -96,4 +96,11 @@ I will refine the mesh further by making it finer at both electrodes and more sp
 
 I want to study the time scale of the formation of the EDL, a good time scale to look at is multiples of 1/(k^2*D) which represents the time it takes for ions to diffuse 1 debye length. For these simulation parameters that corresponds to 9.49e-8 seconds. at the controlDict file I put the end time as 100 times this quantity. the writeinterval as 0.1 times this quantity and I will put the delta t as 2e-10. I will also change the potential at the other electrode to -25mV to get a symmetric graph. This will also get the potential to drop to 0 between the electrodes what is needed to fit my derived theorethical potential because of a B.C. during the derivation.
 
+I noticed that at 100 times this debye diffusion time I could not tell yet if the system had equilibrated, the potential profile was slightly different then at 50 times the diffusion time. I let the simulation continue running untill 250 times the diffusion time which had the same potential profile at 100 times the diffusion time. This tells us that the system equilibrated somewhere between 50 and 100 times this diffusion time.
+
+### 08-06-2020
+#### saltConcentration
+Today I will repeat the last experiment but then with a dimensionless potential of 4, this equals a potential of 103.4mV in our simulation. 
+
+
 
