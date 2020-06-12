@@ -100,7 +100,11 @@ I noticed that at 100 times this debye diffusion time I could not tell yet if th
 
 ### 08-06-2020
 #### saltConcentration
-Today I will repeat the last experiment but then with a dimensionless potential of 4, this equals a potential of 103.4mV in our simulation. 
+Today I will repeat the last experiment but then with a dimensionless potential of 4, this equals a potential of 103.4mV in our simulation. It took longer for the system to equilibriate, the simulation can be continued from the point that it finished at by altering the controlDict file as is further explainen in the openFoam user guide section 4.4 time and data input/output control.
+
+### 12-06-2020
+#### saltConcentration_timeDep
+I want to find out how many discrete timepoints are needed to sample the rms E field in the center of the 2 electrodes over 1 AC cycle. I'll pick the cycle length to be 50 Debye diffusion times and the voltage amplitude to be 25mV, this way the cycle is shorter then the systems equilibriation time so the EDL's will not fully form. to reach this cycle length the frequency in the BC of the electrode in the 0/psi file should be put at 1/(50*9.49e-8) = 210748.156 s^-1. lets sample 100 discrete times in this cycle to see how many are needed for the rms E value in the center to converge to a certain value, so the sample time should be put at 4.745e-8. 
 
 
 
