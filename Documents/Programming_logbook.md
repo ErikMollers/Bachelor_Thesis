@@ -106,5 +106,13 @@ Today I will repeat the last experiment but then with a dimensionless potential 
 #### saltConcentration_timeDep
 I want to find out how many discrete timepoints are needed to sample the rms E field in the center of the 2 electrodes over 1 AC cycle. I'll pick the cycle length to be 50 Debye diffusion times and the voltage amplitude to be 25mV, this way the cycle is shorter then the systems equilibriation time so the EDL's will not fully form. to reach this cycle length the frequency in the BC of the electrode in the 0/psi file should be put at 1/(50*9.49e-8) = 210748.156 s^-1. lets sample 100 discrete times in this cycle to see how many are needed for the rms E value in the center to converge to a certain value, so the sample time should be put at 4.745e-8. 
 
+### 19-06-2020
+#### saltconcentration_timeDep
+After processing the data in a python script the output was:
+the root mean square of 10 timesteps = 49989.8441357484, 
+the root mean square of 25 timesteps = 49349.01167597555,
+the root mean square of 50 timesteps = 49176.4578207401,
+the root mean square of 100 timesteps = 49098.060019631856,
+as can be seen in the data folder. It looks like this data is converging to a value just below 49kV for the true rms value of the electric field. Since we are taking discrete timesteps the more timesteps we will use the better it reflects the true value. At the same time an equivalent circuit was studied, and a theorethical formula was derived for the rms electric field. filling in the parameters used in the simulation gave a theorethical value of 54.3kV/m, which is pretty close to the simulated values. I'm going to let the simulation run for 3 extra cycles to see if the simulated value gets closer to the theorethical one, it can take some cycles for the system to get to its steady state response. continuing the simulation can be done bychanging the starttime in the controlDict file to latestTime.
 
 
