@@ -124,4 +124,8 @@ the root mean square after 3 cycles = 54772.480486267865,
 the root mean square after 4 cycles = 54776.810092938256.
 It looks like after 3 cycles it has converged to 54.8kV/m, which is even closer to the theorethical value. After this I checked if more discrete timesteps would get it even closer, I started with 25 timesteps and the output was:
 the root mean square after 3 cycles with 25 discrete timesteps = 54771.80134838011.
-Which is basicly the same as before, this means that 10 discrete timesteps will be enough after the simulation has run for 3 AC cycles. All previous results where obtained with an angular frequency of 1.3*10^6. The next simulation I will run will be with an angular frequency of 1*10^4 which equals a frequency of 1591.549431, this gives a cycle length of 6.283*10^-4 seconds 3 cycles(endTime) = 1.885*10^-3 seconds and the sample time will have to be 6.283*10^-5 seconds to get 10 samples a cycle.
+Which is basicly the same as before, this means that 10 discrete timesteps will be enough after the simulation has run for 3 AC cycles. All previous results where obtained with an angular frequency of 1.3e6. The next simulation I will run will be with an angular frequency of 1e4 which equals a frequency of 1591.549431, this gives a cycle length of 6.283e-4 seconds 3 cycles(endTime) = 1.885e-3 seconds and the sample time will have to be 6.283*10^-5 seconds to get 10 samples a cycle.
+
+The output was:
+the root mean square = 836.5720023805205.
+The theorethical value of the rms E-field of this AC frequency is 1160 V/m. Again it is of by a few 100 V/m but it does follow the trend. I will repeat the simulation but now with an angular frequency of 1e2 which equals a frequency for the B.C. of 15.91549431. The cycle length becomes 0.062832s, endTime 0.188596s, writeintervall of 0.0062832s. 
