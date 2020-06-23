@@ -24,13 +24,13 @@ boundaryField
     elecCharge
     {
 	type            fixedValue;
-	value           uniform 0.025;      
+	value           uniform 0.1034;      
     }
    
     elecNeutral
     {
 	type            fixedValue;
-        value           uniform 0;        
+        value           uniform -0.1034;        
     }
     
     Sides

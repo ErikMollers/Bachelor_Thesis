@@ -11,7 +11,7 @@ with open("0.03.txt") as f:
     cat_003 = [float(line.split()[3]) for line in lines]
 
     
-x = [(i+145e-9)/9.65e-9 for i in q]
+x = [(i+145e-9)/9.74e-9 for i in q]
 phi_0 = (sp.e*sp.Avogadro*0.025)/(sp.R*300)
 
 

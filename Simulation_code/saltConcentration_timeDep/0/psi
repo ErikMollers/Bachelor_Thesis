@@ -27,7 +27,7 @@ boundaryField
         value           uniform 0;
         offset          0;
         amplitude       0.025;
-        frequency       100;
+        frequency       210748.156;
         phaseDelay      0; 
     }
    
