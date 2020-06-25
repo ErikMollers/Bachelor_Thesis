@@ -129,3 +129,9 @@ Which is basicly the same as before, this means that 10 discrete timesteps will 
 The output was:
 the root mean square = 836.5720023805205.
 The theorethical value of the rms E-field of this AC frequency is 1160 V/m. Again it is of by a few 100 V/m but it does follow the trend. I will repeat the simulation but now with an angular frequency of 1e2 which equals a frequency for the B.C. of 15.91549431. The cycle length becomes 0.062832s, endTime 0.188596s, writeintervall of 0.0062832s. 
+
+### 25-06-2020
+#### saltconcentration_timeDep
+The outcome of the processing python script was:
+the root mean square = 8.391182825666391, the theorethical value was 11.8 V/m.
+I will repeat the same simulation again but now for an angular frequency of 1e5, this equals a frequency in the B.C. of 15915.49431. This equals a cycle length of 6.283e-5s, endTime = 1.8849e-4, writeInterval = 6.283e-6
