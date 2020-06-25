@@ -140,6 +140,9 @@ the root mean square = 8232.105499029609, the theorethical value is 10734.003558
 I will repeat the simulation but now for a cycle length of 5e-3s, the frequency for in the B.C is 200, angular frequency is 400pi, the endTime = 0.015 and the writeInterval = 5e-4. The output of the data processing script is:
 the root mean square = 105.0471501568999, the theorethical value is 147.5989236502524. 
 
-I will repeat the simulation for an angular frequency of 5e2, this gives a frequency of 79.577, cycle length is 0.01257, endTime = 0.03771, writeInterval = 0.001257. 
+I will repeat the simulation for an angular frequency of 5e2, this gives a frequency of 79.577, cycle length is 0.01257, endTime = 0.03771, writeInterval = 0.001257. The output of te python data processing file is:
+the root mean square = 41.80725981993905, the theorethical value is 58.8 V/m.
+
+I will repeat the simulation for an angular frequency of 5e3, this gives a frequency of 795.775, cycle length is 1.257e-3, endtime is 3.771e-3, writeInterval is 1.257e-4
 
 
