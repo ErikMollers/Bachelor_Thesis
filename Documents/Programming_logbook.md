@@ -134,10 +134,12 @@ The theorethical value of the rms E-field of this AC frequency is 1160 V/m. Agai
 #### saltconcentration_timeDep
 The outcome of the processing python script was:
 the root mean square = 8.391182825666391, the theorethical value was 11.8 V/m.
-I will repeat the same simulation again but now for a cycle length of 6e-5, this means we need an frequency in the B.C. of 16666.66667, this equals an angular frequency of 104719.7551, the endTime becomes 1.8e-4 and the writeInterval 6e-6.
-
-the output of the dat processing python script was:
+I will repeat the same simulation again but now for a cycle length of 6e-5, this means we need an frequency in the B.C. of 16666.66667, this equals an angular frequency of 104719.7551, the endTime becomes 1.8e-4 and the writeInterval 6e-6. the output of the dat processing python script was:
 the root mean square = 8232.105499029609, the theorethical value is 10734.003558812392.
-I will repeat the simulation but now for a cycle length of 5e-3s, the frequency for in the B.C is 200, angular frequency is 400pi, the endTime = 0.015 and the writeInterval = 5e-4
+
+I will repeat the simulation but now for a cycle length of 5e-3s, the frequency for in the B.C is 200, angular frequency is 400pi, the endTime = 0.015 and the writeInterval = 5e-4. The output of the data processing script is:
+the root mean square = 105.0471501568999, the theorethical value is 147.5989236502524. 
+
+I will repeat the simulation for an angular frequency of 5e2, this gives a frequency of 79.577, cycle length is 0.01257, endTime = 0.03771, writeInterval = 0.001257. 
 
 
