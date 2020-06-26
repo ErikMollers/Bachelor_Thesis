@@ -8,10 +8,10 @@ Kappa = L_Debye**-1
 Length = 290*10**-9
 Diff = 10**-9
 Phi = 0.025
-Omega = [100, 500, 400*math.pi, 10000, 104719.7551, 1324169.717]
+Omega = [100, 500, 400*math.pi, 5000, 10000, 104719.7551, 1324169.717]
 
 E_theory = [(i*Phi*(Length*Kappa + 2*math.sqrt(Length*Kappa)))/(math.sqrt(2)*Length*Kappa*(i*Length + 2*Diff*Kappa)) for i in Omega]
-E_Numerical = [8.391182825666391, 41.80725981993905, 105.0471501568999, 836.5720023805205, 8232.105499029609, 54772.480486267865]
+E_Numerical = [8.391182825666391, 41.80725981993905, 105.0471501568999, 417.989290692442, 836.5720023805205, 8232.105499029609, 54772.480486267865]
 print(E_theory)
 
 fig, ax = plt.subplots(figsize=(5, 5))
