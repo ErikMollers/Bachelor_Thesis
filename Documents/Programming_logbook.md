@@ -143,6 +143,10 @@ the root mean square = 105.0471501568999, the theorethical value is 147.59892365
 I will repeat the simulation for an angular frequency of 5e2, this gives a frequency of 79.577, cycle length is 0.01257, endTime = 0.03771, writeInterval = 0.001257. The output of te python data processing file is:
 the root mean square = 41.80725981993905, the theorethical value is 58.8 V/m.
 
-I will repeat the simulation for an angular frequency of 5e3, this gives a frequency of 795.775, cycle length is 1.257e-3, endtime is 3.771e-3, writeInterval is 1.257e-4
+I will repeat the simulation for an angular frequency of 5e3, this gives a frequency of 795.775, cycle length is 1.257e-3, endtime is 3.771e-3, writeInterval is 1.257e-4. The outcome of the processing script is:
+the root mean square = 417.989290692442, the theorethical value is 548.2 V/m.
 
+### 26-06-2020
+#### saltconcentration_timeDep
+I will repeat the simulation for and angular frequency of 5e4, frequency is 7957.747, cycle length is 1.257e-4, endTime is 3.771e-4, writeInterval is 1.257e-5.
 
