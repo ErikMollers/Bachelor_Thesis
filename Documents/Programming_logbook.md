@@ -148,5 +148,10 @@ the root mean square = 417.989290692442, the theorethical value is 548.2 V/m.
 
 ### 26-06-2020
 #### saltconcentration_timeDep
-I will repeat the simulation for and angular frequency of 5e4, frequency is 7957.747, cycle length is 1.257e-4, endTime is 3.771e-4, writeInterval is 1.257e-5.
+I will repeat the simulation for an angular frequency of 5e4, frequency is 7957.747, cycle length is 1.257e-4, endTime is 3.771e-4, writeInterval is 1.257e-5. The output of the processing script is:
+the root mean square = 4174.598168651755, the theorethical value is 5495,1 V/m.
+
+### 29-06-2020
+#### saltconcentration_timeDep
+I will rerun the simulation for an angular frequency of 5e5, frequency is 79577.472, cycle length is 1.257 e-5, endTime is 3.771e-5, writeInterval is 1.257e-6.
 
