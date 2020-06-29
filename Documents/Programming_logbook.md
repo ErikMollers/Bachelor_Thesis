@@ -156,5 +156,6 @@ the root mean square = 4174.598168651755, the theorethical value is 5495,1 V/m.
 I will rerun the simulation for an angular frequency of 5e5, frequency is 79577.472, cycle length is 1.257 e-5, endTime is 3.771e-5, writeInterval is 1.257e-6. The outcome of the processing script is:
 the root mean square = 34838.29436083642, the theorethical value is 34480 V/m
 
-I will rerun the simulation for an angular frequency of 2.5e5, frequency is 39788.736, cycle length is 2.513e-5, endTime is 7.539e-5, witeInterval is 2.513e-6.
+I will rerun the simulation for an angular frequency of 2.5e5, frequency is 39788.736, cycle length is 2.513e-5, endTime is 7.539e-5, witeInterval is 2.513e-6. The output of te processing script is:
+the root mean square = 19847.88892743242, the theorethical value is 21739. 
 
