@@ -170,4 +170,9 @@ I started by copying the timDep case, but with the refined mesh as previously di
 
 The resulting mesh is indeed three dimensional, in this view the charged electrode is at the bottom and the neutral one at the top. The next thing that hase to be done is changing the boundary type for the sides in all the field files in the 0/ directory. In the U file I'll change the type from empty to uniform (0 0 0). In the cAnion and cCation files I changed the type from empty to zeroIonicFlux. in the P file I changed the type from empty to zerogradient. Finally in the psi file I changed the type from empty to fixed value 0. The sampleDict file also needs to be slightly altered the x and y coordinates from the start and end should be put at 0 so it samples a straight line through the middle of the electrolyte cell (this file can be found under system/sampleDict).  I think it is all set up to run, now I will try to reproduce all of the AC results.
 
-The first case I will do is the angular frequency = 1e2, the frequency is 15.91549431, the cycle length is 0.062832s, endTime 0.188496s, writeintervall of 0.0062832s. 
+The first case I will do is the angular frequency = 1e2, the frequency is 15.91549431, the cycle length is 0.062832s, endTime 0.188496s, writeintervall of 0.0062832s. The outcome of the processing script is:
+the root mean square = 7.810283419189252.
+
+### 30-06-2020
+#### saltconcentration_timeDep
+I will repeat the simulation for an angular frequency of 5e2, this gives a frequency of 79.577, cycle length is 0.01257, endTime = 0.03771, writeInterval = 0.001257. 
