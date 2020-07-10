@@ -184,4 +184,4 @@ the root mean square = 97.96320586366866.
 ### 10-07-2020
 #### saltconcentration_3D
 I will repeat the simulation for an angular frequency of 5e3, this gives a frequency of 795.775, cycle length is 1.257e-3, endtime is 3.771e-3, writeInterval is 1.257e-4. The outcome of the processing script is:
-
+the root mean square = 389.7965881467761.
