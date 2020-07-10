@@ -173,9 +173,15 @@ The resulting mesh is indeed three dimensional, in this view the charged electro
 The first case I will do is the angular frequency = 1e2, the frequency is 15.91549431, the cycle length is 0.062832s, endTime 0.188496s, writeintervall of 0.0062832s. The outcome of the processing script is:
 the root mean square = 7.810283419189252.
 
-### 30-06-2020
-#### saltconcentration_timeDep
+### 03-07-2020
+#### saltconcentration_3D
 I will repeat the simulation for an angular frequency of 5e2, this gives a frequency of 79.577, cycle length is 0.01257, endTime = 0.03771, writeInterval = 0.001257. the outcome of the processing script is:
 the root mean square = 38.98532325540228.
 
-I will repeat the simulation but now for a cycle length of 5e-3s, the frequency for in the B.C is 200, angular frequency is 400pi, the endTime = 0.015 and the writeInterval = 5e-4.
+I will repeat the simulation but now for a cycle length of 5e-3s, the frequency for in the B.C is 200, angular frequency is 400pi, the endTime = 0.015 and the writeInterval = 5e-4. The outcome of the processing script is:
+the root mean square = 97.96320586366866.
+
+### 10-07-2020
+#### saltconcentration_3D
+I will repeat the simulation for an angular frequency of 5e3, this gives a frequency of 795.775, cycle length is 1.257e-3, endtime is 3.771e-3, writeInterval is 1.257e-4. The outcome of the processing script is:
+
